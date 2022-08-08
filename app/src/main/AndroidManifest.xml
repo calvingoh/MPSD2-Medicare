@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.medicarempsd">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MedicareMPSD"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".users.activities.medicalappointment.AppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.activities.DoctorAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.medicalappointment.ConfirmBookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.medicalappointment.ProfessionalsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.medicalappointment.MedicalProfessionalsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.activities.AddDoctorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.activities.UsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.activities.DoctorsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.healthstats.HealthStatsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.healthstats.AddHealthDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.medicwiki.MedicWikiDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.medicwiki.MedicWikiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.home.UserHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".doctor.DoctorHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.AuthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+
+
+    </application>
+
+</manifest>

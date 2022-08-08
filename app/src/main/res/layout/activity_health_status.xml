@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".users.activities.healthstats.HealthStatsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/add_data_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:src="@drawable/ic_baseline_add_24"
+            app:tint="@color/white" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/arima_madurai_medium"
+            android:text="@string/health_data"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp" />
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:elevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:fontFamily="@font/arima_madurai_medium"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="8sp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:id="@+id/w"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:fontFamily="@font/arima_madurai_medium"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_below="@id/w"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:id="@+id/weight_tv"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/w"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_toEndOf="@id/weight_tv"
+                android:text="@string/kg"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:elevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="8sp"
+                android:fontFamily="@font/arima_madurai_medium"
+                android:text="@string/height"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14ssp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:fontFamily="@font/arima_madurai_medium"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_below="@id/h"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:id="@+id/height_tv"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/h"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_toEndOf="@id/height_tv"
+                android:text="cm"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:elevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="8sp"
+                android:fontFamily="@font/arima_madurai_medium"
+                android:text="@string/bmi"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14ssp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:fontFamily="@font/arima_madurai_medium"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_below="@id/c"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:id="@+id/bmi_tv"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/c"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_toEndOf="@id/bmi_tv"
+                android:text="@string/kg_m2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:elevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="8sp"
+                android:fontFamily="@font/arima_madurai_medium"
+                android:text="@string/blood_pressure"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14ssp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:fontFamily="@font/arima_madurai_medium"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_below="@id/b"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:id="@+id/blood_pressure_tv"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/b"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_toEndOf="@id/blood_pressure_tv"
+                android:text="@string/mm_hg"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorSize="@dimen/_22sdp"
+        app:trackThickness="@dimen/_2sdp" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

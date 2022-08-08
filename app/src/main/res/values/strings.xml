@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Medicare</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo_image">logoDes</string>
+    <string name="welcome">Welcome,</string>
+    <string name="log_in_to_continue">Log in to continue!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="register_now">Register Now!</string>
+    <string name="still_don_t_have_an_account">Still don\'t have an account?</string>
+    <string name="register">Register</string>
+    <string name="user_name">User name</string>
+    <string name="company_name">Company name</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="opps">Oops Forgot Your</string>
+    <string name="passwordf">Password?</string>
+    <string name="send">Send</string>
+    <string name="profile_type">Profile Type</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="edit">Edit</string>
+    <string name="logout">Logout</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="update">Update</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone Number</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="medical_professionals">Medical Professionals</string>
+    <string name="medic_wiki">Medic Wiki</string>
+    <string name="health_data">Health Data</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="bmi">BMI</string>
+    <string name="height">Height</string>
+    <string name="kg">Kg</string>
+    <string name="mm_hg">mm Hg</string>
+    <string name="kg_m2">kg/m2</string>
+    <string name="add_data">Add Data</string>
+    <string name="weight">Weight</string>
+    <string name="users">Users</string>
+    <string name="extended_fab_label">Add Doctor</string>
+    <string name="doctors">Doctors</string>
+    <string name="add_doctor">Add Doctor</string>
+    <string name="qualification">Qualification</string>
+    <string name="specialization">Specialization</string>
+    <string name="choose_your_specialist">Choose your specialist</string>
+    <string name="booking_date">Appointment Date</string>
+    <string name="appointment_time">Appointment Time</string>
+    <string name="cancel">Cancel</string>
+    <string name="book">Book</string>
+    <string name="book_appointment">Book Appointment</string>
+    <string name="booking_success">Booking Success!</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="meetingLink">Meeting Link</string>
+    <string name="add_btn">Add</string>
+    <string name="prescription">Prescription</string>
+    <string name="add_prescription">Add Prescription</string>
+    <string name="doctors_name">Doctor Name</string>
+
+
+    <array name="specialization_array">
+        <item>Cardiology</item>
+        <item>Dentistry</item>
+        <item>Dermatology</item>
+        <item>Gynecology</item>
+        <item>Physician</item>
+    </array>
+</resources>

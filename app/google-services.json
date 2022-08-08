@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "803870039830",
+    "firebase_url": "https://medicare-d1a08-default-rtdb.firebaseio.com",
+    "project_id": "medicare-d1a08",
+    "storage_bucket": "medicare-d1a08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803870039830:android:451dda3927defae40dba37",
+        "android_client_info": {
+          "package_name": "com.example.medicarempsd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803870039830-kq9oh70923i1drpurahpnppl7hokcnv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUaRxpCbLTJ_3nDMhmp3RWdlkzg2lT0b0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803870039830-kq9oh70923i1drpurahpnppl7hokcnv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803870039830:android:ca7dd99562857bd60dba37",
+        "android_client_info": {
+          "package_name": "com.malik.medicareapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803870039830-kq9oh70923i1drpurahpnppl7hokcnv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUaRxpCbLTJ_3nDMhmp3RWdlkzg2lT0b0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803870039830-kq9oh70923i1drpurahpnppl7hokcnv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
