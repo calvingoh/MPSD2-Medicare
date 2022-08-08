@@ -29,7 +29,7 @@ public class HealthStatsActivity extends AppCompatActivity {
         binding = ActivityHealthStatusBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        //initialize
+        //initialize firebase
         mAuth = FirebaseAuth.getInstance();
         healthRef = FirebaseDatabase.getInstance().getReference("health").child(Objects.requireNonNull(mAuth.getUid()));
 
