@@ -39,7 +39,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:803870039830:android:ca7dd99562857bd60dba37",
         "android_client_info": {
-          "package_name": "com.malik.medicareapp"
+          "package_name": "com.example.medicarempsd"
         }
       },
       "oauth_client": [
