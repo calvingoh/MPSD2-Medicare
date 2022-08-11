@@ -11,3 +11,8 @@ Github link: https://github.com/calvingoh/MedicareMPSD
 2,3 & 4 can be retrieved from GitHub or OpenLearning.
 
 Thank you!
+
+# Steps To Clone Our Application
+1) copy this link https://github.com/calvingoh/MedicareMPSD.git
+2) launch Android Studio and select get from VCS
+3) paste the link into the url textbox 
