@@ -84,8 +84,6 @@ public class ProfileActivity extends AppCompatActivity {
         );
         //set spinner adapter
         binding.specializationSpinner.setAdapter(arrayAdapter);
-
-
         //getting profile type
         binding.specializationSpinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener() {
             @Override
@@ -152,13 +150,10 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void showDatePickerDialog() {
-        // Get open DatePickerDialog button.
         // Create a new OnDateSetListener instance. This listener will be invoked when user click ok button in DatePickerDialog.
         DatePickerDialog.OnDateSetListener onDateSetListener = (datePicker, year, month, dayOfMonth) -> {
             strBuf = new StringBuffer();
             // strBuf.append("You select date is ");
-
-
             if ((month + 1) < 10) {
                 strBuf.append("0" + (month + 1));
             } else {
@@ -188,8 +183,6 @@ public class ProfileActivity extends AppCompatActivity {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-
-
             binding.dobEt.setText(ages + " " + "Years" + " / " + formateDate);
         };
         // Get current year, month and day.
@@ -204,7 +197,6 @@ public class ProfileActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    //to get date of birth
     private String getAge(int year, int month, int day) {
 
         Calendar dob = Calendar.getInstance();
@@ -293,7 +285,6 @@ public class ProfileActivity extends AppCompatActivity {
 
                         }
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                         Snackbar snackbar = Snackbar
@@ -302,11 +293,9 @@ public class ProfileActivity extends AppCompatActivity {
                         binding.loading.setVisibility(View.GONE);
                     }
                 });
-
     }
 
     public void checkAndroidVersion() {
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             try {
                 requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 555);
@@ -332,26 +321,17 @@ public class ProfileActivity extends AppCompatActivity {
                     .maxResultSize(1080, 1080)    //Final image resolution will be less than 1080 x 1080(Optional)
                     .start();
         } else {
-
             checkAndroidVersion();
-
         }
     }
 
-    //
     private void updateProfile() {
-
-
         if (resultUri != null) {
-
-
             binding.loading.setVisibility(View.VISIBLE);
-
 
             final StorageReference filePath = FirebaseStorage.getInstance().getReference().child("Users").child(resultUri.getLastPathSegment());
             Bitmap bitmap = null;
             try {
-
                 bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), resultUri);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -389,19 +369,16 @@ public class ProfileActivity extends AppCompatActivity {
 
                 }).addOnFailureListener(e -> {
                     binding.loading.setVisibility(View.GONE);
-
                     Toast.makeText(ProfileActivity.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
-
                 });
-
                 return;
+
             }).addOnFailureListener(exception -> {
                 binding.loading.setVisibility(View.GONE);
                 Toast.makeText(ProfileActivity.this, "" + exception.getMessage(), Toast.LENGTH_SHORT).show();
 
             }));
         } else {
-
             binding.loading.setVisibility(View.VISIBLE);
 
             Map<String, Object> updateValue = new HashMap<>();
@@ -417,22 +394,15 @@ public class ProfileActivity extends AppCompatActivity {
 
             userRef.child(mAuth.getUid()).updateChildren(updateValue)
                     .addOnCompleteListener(task -> {
-
-
                         binding.loading.setVisibility(View.GONE);
-
                         Toast.makeText(ProfileActivity.this, "Profile Updated Successfully", Toast.LENGTH_SHORT).show();
                         onBackPressed();
 
                     }).addOnFailureListener(e -> {
                         binding.loading.setVisibility(View.GONE);
                         Toast.makeText(ProfileActivity.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
-
-
                     });
 
         }
     }
-
-
 }

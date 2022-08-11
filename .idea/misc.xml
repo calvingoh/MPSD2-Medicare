@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2455" />
         <entry key="app/src/main/res/font/arima_madurai.xml" value="0.1527777777777778" />
         <entry key="app/src/main/res/layout/activity_add_doctor.xml" value="0.13297872340425532" />
         <entry key="app/src/main/res/layout/activity_add_health_data.xml" value="0.12604166666666666" />
@@ -14,6 +15,23 @@
         <entry key="app/src/main/res/layout/activity_doctor_home.xml" value="0.12604166666666666" />
         <entry key="app/src/main/res/layout/activity_doctors.xml" value="0.12604166666666666" />
         <entry key="app/src/main/res/layout/activity_health_status.xml" value="0.12604166666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/activity_medic_wiki.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/activity_medic_wiki_detail.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/activity_medical_professionals.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/activity_professionals.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/activity_user_home.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/activity_users.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/custom_add_meeting_layout.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/custom_appointment_layout.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/custom_dialog_layout.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/custom_medic_wiki_layout.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/custom_specialist_layout.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/custom_user_home_layout.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/custom_users_layout.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/fragment_forgot_password.xml" value="0.2734375" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.12604166666666666" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.12604166666666666" />
       </map>

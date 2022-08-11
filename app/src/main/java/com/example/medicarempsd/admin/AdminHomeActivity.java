@@ -73,7 +73,6 @@ public class AdminHomeActivity extends AppCompatActivity implements HomeAdapter.
                                         .load(users.getImage())
                                         .into(binding.userImage);
                             }
-
                         }
                     }
 
@@ -87,7 +86,6 @@ public class AdminHomeActivity extends AppCompatActivity implements HomeAdapter.
 
     }
     private void setHomeMenu() {
-
         homeArrayList.add(new Home("1", "Doctors", R.drawable.doctor));
         homeArrayList.add(new Home("2", "Users", R.drawable.man));
         homeArrayList.add(new Home("3", "Health Stats", R.drawable.stats));
@@ -96,7 +94,6 @@ public class AdminHomeActivity extends AppCompatActivity implements HomeAdapter.
         binding.homeMenuRv.setLayoutManager(new GridLayoutManager(this, 3));
         binding.homeMenuRv.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener(this);
-
     }
 
     @Override
@@ -110,12 +107,11 @@ public class AdminHomeActivity extends AppCompatActivity implements HomeAdapter.
         }if (home.getId().equals("4")){
             // Use format with "tel:" and phoneNumber created is
             // stored in u.
-            Uri u = Uri.parse("tel:" +"+60 1-300-88-1919");
+            Uri u = Uri.parse("tel:" +"999");
 
             // Create the intent and set the data for the
             // intent as the phone number.
             Intent i = new Intent(Intent.ACTION_DIAL, u);
-
             try
             {
                 // Launch the Phone app's dialer with a phone
@@ -130,6 +126,5 @@ public class AdminHomeActivity extends AppCompatActivity implements HomeAdapter.
                         .show();
             }
         }
-
     }
 }

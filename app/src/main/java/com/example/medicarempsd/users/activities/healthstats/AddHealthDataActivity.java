@@ -25,15 +25,11 @@ public class AddHealthDataActivity extends AppCompatActivity {
         binding = ActivityAddHealthDataBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
         //initialize
         mAuth = FirebaseAuth.getInstance();
         healthRef = FirebaseDatabase.getInstance().getReference("health").child(mAuth.getUid());
 
-
         binding.backBtn.setOnClickListener(v -> onBackPressed());
-
-
         binding.addDataBtn.setOnClickListener(v -> {
             //check validations
             if (Objects.requireNonNull(binding.weightEt.getText()).toString().isEmpty()) {
@@ -44,8 +40,6 @@ public class AddHealthDataActivity extends AppCompatActivity {
                 binding.heightEt.setError("Please enter height");
                 return;
             }
-
-
             if (Objects.requireNonNull(binding.bmiEt.getText()).toString().isEmpty()) {
                 binding.bmiEt.setError("Please enter valid BMI");
                 return;
@@ -54,18 +48,11 @@ public class AddHealthDataActivity extends AppCompatActivity {
                 binding.bloodPressureEt.setError("Please enter blood pressure");
                 return;
             }
-
-
-            //register user
             addHealthData();
         });
-
-
     }
 
     private void addHealthData() {
-
-
         binding.loading.setVisibility(View.VISIBLE);
 
         Health health = new Health(

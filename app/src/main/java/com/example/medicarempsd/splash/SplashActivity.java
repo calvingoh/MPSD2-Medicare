@@ -26,7 +26,6 @@ public class SplashActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         new Handler().postDelayed(() -> {
-
             //if user logged in
             if (mAuth.getCurrentUser() != null){
                 SharedPreferences sharedPreferences = getSharedPreferences(Constants.sharedPrefName, MODE_PRIVATE);
@@ -49,6 +48,5 @@ public class SplashActivity extends AppCompatActivity {
             }
             finish();
         }, 3000);
-
     }
 }

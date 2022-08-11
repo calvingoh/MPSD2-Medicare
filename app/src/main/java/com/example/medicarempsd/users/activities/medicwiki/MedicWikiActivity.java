@@ -26,11 +26,9 @@ public class MedicWikiActivity extends AppCompatActivity implements MedicWikiAda
         binding.backBtn.setOnClickListener(v -> onBackPressed());
 
         getWikiData();
-
     }
 
     private void getWikiData() {
-
         medicWikiArrayList.add(new MedicWiki("1", "Covid and Its Effects", R.drawable.covid_image));
         medicWikiArrayList.add(new MedicWiki("2", "Learn About Vaccines", R.drawable.covid_image_2));
         medicWikiArrayList.add(new MedicWiki("3", "Fight Against Cancer", R.drawable.cancer_image));
@@ -40,17 +38,13 @@ public class MedicWikiActivity extends AppCompatActivity implements MedicWikiAda
         binding.medicWikiRv.setLayoutManager(new LinearLayoutManager(MedicWikiActivity.this));
         binding.medicWikiRv.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener(this);
-
     }
 
     @Override
     public void onListItemClick(MedicWiki home) {
-
         Intent intent = new Intent(MedicWikiActivity.this, MedicWikiDetailActivity.class);
         intent.putExtra("title", home.getTitle());
         intent.putExtra("image", home.getImage());
         startActivity(intent);
-
-
     }
 }

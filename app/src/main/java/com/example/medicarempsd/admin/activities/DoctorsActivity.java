@@ -47,7 +47,6 @@ public class DoctorsActivity extends AppCompatActivity {
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
             }
-
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if (!binding.searchEt.getText().toString().isEmpty()) {
@@ -57,7 +56,6 @@ public class DoctorsActivity extends AppCompatActivity {
                 } else {
                     getDoctors();
                 }
-
             }
 
             @Override

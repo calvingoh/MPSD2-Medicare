@@ -112,7 +112,7 @@ public class DoctorHomeActivity extends AppCompatActivity implements HomeAdapter
         }if (home.getId().equals("3")){
             // Use format with "tel:" and phoneNumber created is
             // stored in u.
-            Uri u = Uri.parse("tel:" +"+60 1-300-88-1919");
+            Uri u = Uri.parse("tel:" +"999");
 
             // Create the intent and set the data for the
             // intent as the phone number.

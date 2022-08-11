@@ -60,8 +60,6 @@ public class RegisterFragment extends Fragment {
                 binding.phoneNoEt.setError("Please enter phone number");
                 return;
             }
-
-
             if (Objects.requireNonNull(binding.emailEt.getText()).toString().isEmpty()) {
                 binding.emailEt.setError("Please enter valid email");
                 return;
@@ -167,7 +165,6 @@ public class RegisterFragment extends Fragment {
                         Objects.requireNonNull(binding.passwordEt.getText()).toString())
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-
                         //store user detail in firebase
                         Users users;
                         users = new Users(
@@ -180,9 +177,7 @@ public class RegisterFragment extends Fragment {
                                 "",
                                 "",
                                 ""
-
                         );
-
                         userRef.child(Objects.requireNonNull(mAuth.getUid())).setValue(users).addOnCompleteListener(task1 -> {
                             if (task1.isSuccessful()) {
                                 binding.loading.setVisibility(View.GONE);
@@ -193,9 +188,7 @@ public class RegisterFragment extends Fragment {
                                 Navigation.findNavController(requireView()).navigateUp();
                             }
                         });
-
                     }
-
                 }).addOnFailureListener(e -> {
                     binding.loading.setVisibility(View.GONE);
                     binding.registerBtn.setEnabled(true);

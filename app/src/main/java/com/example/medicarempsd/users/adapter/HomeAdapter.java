@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.medicarempsd.Class.Home;
 import com.example.medicarempsd.databinding.CustomUserHomeLayoutBinding;
-import com.example.medicarempsd.Class.Home;
 
 import java.util.ArrayList;
 
@@ -20,7 +19,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     ArrayList<Home> homeArrayList;
     OnItemClickListener mListener;
 
-
     public HomeAdapter(Context context, ArrayList<Home> homeArrayList) {
 
         this.context = context;
@@ -29,14 +27,11 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
     public interface OnItemClickListener {
         void onListItemClick(Home home);
-
-
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
-
 
     @NonNull
     @Override
@@ -55,9 +50,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         Home home = homeArrayList.get(position);
         holder.bind(home);
-
     }
-
 
     @Override
     public int getItemCount() {
@@ -71,7 +64,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             super(binding.getRoot());
             this.binding = binding;
 
-
             binding.linear.setOnClickListener(view -> {
                 int position = getAdapterPosition();
                 if (position != RecyclerView.NO_POSITION) {
@@ -79,8 +71,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
                     mListener.onListItemClick(home);
                 }
             });
-
-
         }
 
         public void bind(Home home) {
@@ -91,8 +81,4 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
         }
     }
-
-
-
-
 }

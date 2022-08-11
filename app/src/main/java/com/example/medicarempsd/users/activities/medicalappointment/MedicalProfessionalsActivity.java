@@ -29,8 +29,7 @@ public class MedicalProfessionalsActivity extends AppCompatActivity implements S
 
         setUpSpecialist();
 
-
-        //search articles
+        //search
         binding.searchEt.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -46,41 +45,45 @@ public class MedicalProfessionalsActivity extends AppCompatActivity implements S
                 } else {
                   setUpSpecialist();
                 }
-
             }
 
             @Override
             public void afterTextChanged(Editable editable) {
-
             }
         });
-
     }
 
     private void setUpSpecialist() {
-
         specialistArrayList.clear();
-        specialistArrayList.add(new Specialist("1", "Cardiology"));
-        specialistArrayList.add(new Specialist("2", "Dentistry"));
-        specialistArrayList.add(new Specialist("3", "Dermatology"));
-        specialistArrayList.add(new Specialist("4", "Gynecology"));
-        specialistArrayList.add(new Specialist("5", "Physician"));
+        specialistArrayList.add(new Specialist("1", "Anaesthesiology"));
+        specialistArrayList.add(new Specialist("2", "Cardiology"));
+        specialistArrayList.add(new Specialist("3", "Cardiovascular/Thoracic Surgery"));
+        specialistArrayList.add(new Specialist("4", "Clinical Immunology/Allergy"));
+        specialistArrayList.add(new Specialist("5", "Dentistry"));
+        specialistArrayList.add(new Specialist("6", "Dermatology"));
+        specialistArrayList.add(new Specialist("7", "Gastroenterology"));
+        specialistArrayList.add(new Specialist("7", "General Surgery"));
+        specialistArrayList.add(new Specialist("8", "General/Clinical Pathology"));
+        specialistArrayList.add(new Specialist("9", "Gynecology"));
+        specialistArrayList.add(new Specialist("10", "Otolaryngology"));
+        specialistArrayList.add(new Specialist("11", "Physician"));
+        specialistArrayList.add(new Specialist("12", "Plastic Surgery"));
+        specialistArrayList.add(new Specialist("13", "Psychiatry"));
+        specialistArrayList.add(new Specialist("14", "Neurology"));
+        specialistArrayList.add(new Specialist("15", "Urology"));
 
         mAdapter = new SpecialistAdapter(this, specialistArrayList);
         binding.specialistRv.setLayoutManager(new GridLayoutManager(this, 2));
         binding.specialistRv.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener(this);
-
     }
 
 
     @Override
     public void onListItemClick(Specialist specialist) {
-
         Intent intent = new Intent(MedicalProfessionalsActivity.this, ProfessionalsActivity.class);
         intent.putExtra("title", specialist.getTitle());
         startActivity(intent);
-
     }
 
     //getting filter list
@@ -90,7 +93,6 @@ public class MedicalProfessionalsActivity extends AppCompatActivity implements S
         for (Specialist modal : hi) {
 
             final String sTitle = modal.getTitle().toLowerCase();
-
 
             if (sTitle.startsWith(query)) {
                 filterModeList.add(modal);

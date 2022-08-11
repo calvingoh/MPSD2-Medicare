@@ -19,7 +19,6 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/_16sdp"
             android:layout_marginEnd="@dimen/_16sdp"
-
             >
 
             <ImageView

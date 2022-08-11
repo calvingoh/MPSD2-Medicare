@@ -62,26 +62,19 @@ public class ProfessionalsActivity extends AppCompatActivity implements UserAdap
             binding.title.setText(specialization);
             getDoctors(specialization);
         }
-
         getUserData();
-
     }
+
     private void getUserData() {
         userRef.child(Objects.requireNonNull(mAuth.getUid()))
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if (snapshot.exists()) {
-
-
                             Users users = snapshot.getValue(Users.class);
-
                             patientName = users.getName();
-
-
                         }
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                         Snackbar snackbar = Snackbar
@@ -89,8 +82,8 @@ public class ProfessionalsActivity extends AppCompatActivity implements UserAdap
                         snackbar.show();
                     }
                 });
-
     }
+
     private void getDoctors(String specialization) {
         doctorArrayList.clear();
         binding.loading.setVisibility(View.VISIBLE);
@@ -125,12 +118,10 @@ public class ProfessionalsActivity extends AppCompatActivity implements UserAdap
                 snackbar.show();
             }
         });
-
     }
 
     @Override
     public void onListItemClick(Users users) {
-
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.custom_dialog_layout);
 
@@ -148,19 +139,19 @@ public class ProfessionalsActivity extends AppCompatActivity implements UserAdap
             SimpleDateFormat dateFormat = new SimpleDateFormat(myFormat, Locale.US);
             selectDate.setText(dateFormat.format(myCalendar.getTime()));
         };
-        selectDate.setOnClickListener(v -> new DatePickerDialog(ProfessionalsActivity.this, date, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show());
-
+        selectDate.setOnClickListener(v -> new DatePickerDialog(ProfessionalsActivity.this, date, myCalendar.get(Calendar.YEAR),
+                myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show());
 
         selectTime.setOnClickListener(v -> {
             Calendar mcurrentTime = Calendar.getInstance();
             int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
             int minute = mcurrentTime.get(Calendar.MINUTE);
             TimePickerDialog mTimePicker;
-            mTimePicker = new TimePickerDialog(ProfessionalsActivity.this, (timePicker, selectedHour, selectedMinute) -> selectTime.setText(selectedHour + ":" + selectedMinute), hour, minute, true);//Yes 24 hour time
+            mTimePicker = new TimePickerDialog(ProfessionalsActivity.this, (timePicker, selectedHour, selectedMinute) ->
+                    selectTime.setText(selectedHour + ":" + selectedMinute), hour, minute, true);//Yes 24 hour time
             mTimePicker.setTitle("Select Time");
             mTimePicker.show();
         });
-
 
         bookingBtn.setOnClickListener(v -> {
             if (selectDate.getText().toString().isEmpty()) {
@@ -171,20 +162,13 @@ public class ProfessionalsActivity extends AppCompatActivity implements UserAdap
                 selectTime.setError("Please select time");
                 return;
             }
-
             bookAppointment(dialog, selectDate.getText().toString(), selectTime.getText().toString(),
                     users.getUserId(), users.getName());
         });
-
-
         dialog.show();
-
     }
 
-
-    private void bookAppointment(Dialog dialog, String selectedData, String selectedTime, String doctorId,
-    String doctorName) {
-
+    private void bookAppointment(Dialog dialog, String selectedData, String selectedTime, String doctorId, String doctorName) {
         String appointmentId = appointmentRef.push().getKey();
         Map<String, Object> appointment = new HashMap<>();
         appointment.put("appointmentId",appointmentId);
@@ -209,8 +193,5 @@ public class ProfessionalsActivity extends AppCompatActivity implements UserAdap
                         startActivity(intent);
                     }
                 }).addOnFailureListener(e -> Toast.makeText(ProfessionalsActivity.this, ""+ e.toString(), Toast.LENGTH_SHORT).show());
-
-
-
-    }
-}
+            }
+        }

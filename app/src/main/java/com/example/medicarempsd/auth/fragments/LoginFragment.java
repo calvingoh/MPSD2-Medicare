@@ -61,7 +61,8 @@ public class LoginFragment extends Fragment {
         //permissions
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             try {
-                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 555);
+                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 555);
             } catch (Exception e) {
                 Log.e("userPer", e.toString());
             }
@@ -95,15 +96,12 @@ public class LoginFragment extends Fragment {
     }
 
     private void login() {
-
         binding.loading.setVisibility(View.VISIBLE);
         binding.loginBtn.setEnabled(false);
 
         mAuth.signInWithEmailAndPassword(binding.emailEt.getText().toString(), binding.passwordEt.getText().toString())
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-
-
                         userRef.child(Objects.requireNonNull(mAuth.getUid()))
                                 .addListenerForSingleValueEvent(new ValueEventListener() {
                                     @Override
@@ -141,18 +139,13 @@ public class LoginFragment extends Fragment {
                                                 startActivity(intent);
                                                 requireActivity().finish();
                                             }
-
-
                                         }
                                     }
-
                                     @Override
                                     public void onCancelled(@NonNull DatabaseError error) {
 
                                     }
                                 });
-
-
                     }
                 }).addOnFailureListener(e -> {
                     binding.loading.setVisibility(View.GONE);
@@ -161,6 +154,5 @@ public class LoginFragment extends Fragment {
                             .make(binding.getRoot(), e.getMessage(), Snackbar.LENGTH_LONG);
                     snackbar.show();
                 });
-
     }
 }

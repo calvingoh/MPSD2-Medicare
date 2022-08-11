@@ -45,7 +45,6 @@ public class HealthStatsActivity extends AppCompatActivity {
     }
 
     private void getHealthData() {
-
         binding.loading.setVisibility(View.VISIBLE);
         healthRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

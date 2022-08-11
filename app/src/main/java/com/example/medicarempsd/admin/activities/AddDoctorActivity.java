@@ -60,7 +60,6 @@ public class AddDoctorActivity extends AppCompatActivity {
         //set spinner adapter
         binding.specializationSpinner.setAdapter(arrayAdapter);
 
-
         //getting profile type
         binding.specializationSpinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener() {
             @Override
@@ -74,7 +73,6 @@ public class AddDoctorActivity extends AppCompatActivity {
             }
         });
 
-
         binding.registerDoctorBtn.setOnClickListener(view -> {
 
             //check validations
@@ -86,8 +84,6 @@ public class AddDoctorActivity extends AppCompatActivity {
                 binding.phoneNoEt.setError("Please enter phone number");
                 return;
             }
-
-
             if (Objects.requireNonNull(binding.emailEt.getText()).toString().isEmpty()) {
                 binding.emailEt.setError("Please enter valid email");
                 return;
@@ -96,7 +92,6 @@ public class AddDoctorActivity extends AppCompatActivity {
                 binding.passwordEt.setError("Please enter password");
                 return;
             }
-
             if (Objects.requireNonNull(binding.dobEt.getText()).toString().isEmpty()) {
                 binding.dobEt.setError("Please select date of birth");
                 return;
@@ -135,7 +130,6 @@ public class AddDoctorActivity extends AppCompatActivity {
                                 "",
                                 specializationValue,
                                 binding.qualificationEt.getText().toString()
-
                         );
 
                         userRef.child(Objects.requireNonNull(mAuth.getUid())).setValue(users).addOnCompleteListener(task1 -> {
@@ -154,13 +148,10 @@ public class AddDoctorActivity extends AppCompatActivity {
                                             snackbar.show();
                                             onBackPressed();
                                         });
-
-
                             }
                         });
 
                     }
-
                 }).addOnFailureListener(e -> {
                     binding.loading.setVisibility(View.GONE);
                     binding.registerDoctorBtn.setEnabled(true);
@@ -171,13 +162,10 @@ public class AddDoctorActivity extends AppCompatActivity {
     }
 
     private void showDatePickerDialog() {
-        // Get open DatePickerDialog button.
         // Create a new OnDateSetListener instance. This listener will be invoked when user click ok button in DatePickerDialog.
         DatePickerDialog.OnDateSetListener onDateSetListener = (datePicker, year, month, dayOfMonth) -> {
             strBuf = new StringBuffer();
             // strBuf.append("You select date is ");
-
-
             if ((month + 1) < 10) {
                 strBuf.append("0" + (month + 1));
             } else {
@@ -191,11 +179,8 @@ public class AddDoctorActivity extends AppCompatActivity {
                 strBuf.append(dayOfMonth);
             }
             strBuf.append("-");
-
             strBuf.append(year);
-
             String ages = getAge(year, month + 1, dayOfMonth);
-
             dobDate = strBuf.toString();
 
             try {
@@ -223,7 +208,6 @@ public class AddDoctorActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    //to get date of birth
     private String getAge(int year, int month, int day) {
 
         Calendar dob = Calendar.getInstance();

@@ -16,14 +16,11 @@ import com.example.medicarempsd.Class.Users;
 import java.util.ArrayList;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
-
     private Context context;
     ArrayList<Users> usersArrayList;
     OnItemClickListener mListener;
 
-
     public UserAdapter(Context context, ArrayList<Users> usersArrayList) {
-
         this.context = context;
         this.usersArrayList = usersArrayList;
     }
@@ -37,7 +34,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         mListener = listener;
     }
 
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -47,7 +43,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                         parent,
                         false);
 
-
         return new ViewHolder(binding);
     }
 
@@ -55,9 +50,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         Users users = usersArrayList.get(position);
         holder.bind(users);
-
     }
-
 
     @Override
     public int getItemCount() {
@@ -78,15 +71,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                     mListener.onListItemClick(users);
                 }
             });
-
-
         }
 
         public void bind(Users users) {
             binding.userName.setText(users.getName());
             binding.userEmail.setText(users.getEmail());
             binding.userPhone.setText(users.getPhone());
-
 
             if(users.getType().equals("doctor")){
                 binding.bookCardView.setVisibility(View.VISIBLE);
@@ -115,7 +105,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                             .into(binding.userImage);
                 }
             }
-
         }
     }
 
@@ -125,6 +114,4 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         notifyDataSetChanged();
 
     }
-
-
 }

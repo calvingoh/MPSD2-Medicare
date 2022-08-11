@@ -9,14 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.medicarempsd.Class.Appointment;
-import com.google.firebase.auth.FirebaseAuth;
 import com.example.medicarempsd.databinding.CustomAppointmentLayoutBinding;
-import com.example.medicarempsd.Class.Appointment;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
 public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.ViewHolder> {
-
     private Context context;
     ArrayList<Appointment> appointmentArrayList;
     OnItemClickListener mListener;
@@ -33,8 +31,6 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
         void onRejectClick(Appointment home);
         void onMeetingLinkClick(Appointment home);
         void onPrescriptionClick(Appointment home);
-
-
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -51,7 +47,6 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
                         parent,
                         false);
 
-
         return new ViewHolder(binding);
     }
 
@@ -59,9 +54,7 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         Appointment home = appointmentArrayList.get(position);
         holder.bind(home);
-
     }
-
 
     @Override
     public int getItemCount() {
@@ -75,7 +68,6 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
             super(binding.getRoot());
             this.binding = binding;
 
-
             binding.acceptBtn.setOnClickListener(view -> {
                 int position = getAdapterPosition();
                 if (position != RecyclerView.NO_POSITION) {
@@ -83,7 +75,6 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
                     mListener.onAcceptClick(home);
                 }
             });
-
             binding.rejectBtn.setOnClickListener(view -> {
                 int position = getAdapterPosition();
                 if (position != RecyclerView.NO_POSITION) {
@@ -91,7 +82,6 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
                     mListener.onRejectClick(home);
                 }
             });
-
             binding.meetingLink.setOnClickListener(view -> {
                 int position = getAdapterPosition();
                 if (position != RecyclerView.NO_POSITION) {
@@ -114,17 +104,13 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
             binding.bookDate.setText(home.getDate());
             binding.bookTime.setText(home.getTime());
             binding.bookSpecialization.setText(home.getSpecialization());
+
             if (!home.getMeetingLink().equals("")){
                 binding.meetingLink.setText(home.getMeetingLink());
-
             }
-
-
             if (!home.getPrescription().equals("")){
                 binding.addPrescription.setText(home.getPrescription());
-
             }
-
             if (home.getStatus().equals("accepted")){
                 binding.acceptBtn.setText("Accepted");
                 binding.acceptBtn.setEnabled(false);

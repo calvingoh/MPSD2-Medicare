@@ -73,11 +73,14 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/doctor_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/search"
-        android:layout_margin="@dimen/_8sdp"
-        android:id="@+id/doctor_rv"/>
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp" />
 
 
 

@@ -55,38 +55,28 @@ public class AppointmentActivity extends AppCompatActivity implements Appointmen
                             for (DataSnapshot ds: snapshot.getChildren()){
                                 Appointment appointment = ds.getValue(Appointment.class);
                                 appointmentArrayList.add(appointment);
-
                             }
                             mAdapter = new AppointmentAdapter(AppointmentActivity.this, appointmentArrayList);
                             binding.appointmentRv.setLayoutManager(new LinearLayoutManager(AppointmentActivity.this));
                             binding.appointmentRv.setAdapter(mAdapter);
                             mAdapter.setOnItemClickListener(AppointmentActivity.this);
-
-
                         }else {
                             binding.loading.setVisibility(View.GONE);
                         }
-
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-
                     }
                 });
-
     }
 
 
     public void onAcceptClick(Appointment home) {
-
     }
-
 
     public void onRejectClick(Appointment home) {
-
     }
-
 
     public void onMeetingLinkClick(Appointment home) {
         String data = home.getMeetingLink();
@@ -96,6 +86,5 @@ public class AppointmentActivity extends AppCompatActivity implements Appointmen
     }
 
     public void onPrescriptionClick(Appointment home) {
-
     }
 }

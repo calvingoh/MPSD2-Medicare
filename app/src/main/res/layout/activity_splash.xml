@@ -51,11 +51,10 @@
         android:layout_below="@id/text"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_8sdp"
-        app:indicatorColor="@color/white"
         android:indeterminate="true"
+        app:indicatorColor="@color/white"
         app:indicatorSize="@dimen/_22sdp"
-        app:trackThickness="@dimen/_2sdp"
-        />
+        app:trackThickness="@dimen/_2sdp" />
 
 
 

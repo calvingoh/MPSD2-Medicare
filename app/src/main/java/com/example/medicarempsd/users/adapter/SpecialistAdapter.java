@@ -13,28 +13,22 @@ import com.example.medicarempsd.databinding.CustomSpecialistLayoutBinding;
 import java.util.ArrayList;
 
 public class SpecialistAdapter extends RecyclerView.Adapter<SpecialistAdapter.ViewHolder> {
-
     private Context context;
     ArrayList<Specialist> specialistArrayList;
     OnItemClickListener mListener;
 
-
     public SpecialistAdapter(Context context, ArrayList<Specialist> specialistArrayList) {
-
         this.context = context;
         this.specialistArrayList = specialistArrayList;
     }
 
     public interface OnItemClickListener {
         void onListItemClick(Specialist home);
-
-
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
-
 
     @NonNull
     @Override
@@ -44,7 +38,6 @@ public class SpecialistAdapter extends RecyclerView.Adapter<SpecialistAdapter.Vi
                         LayoutInflater.from(parent.getContext()),
                         parent,
                         false);
-
 
         return new ViewHolder(binding);
     }
@@ -69,7 +62,6 @@ public class SpecialistAdapter extends RecyclerView.Adapter<SpecialistAdapter.Vi
             super(binding.getRoot());
             this.binding = binding;
 
-
             binding.linear.setOnClickListener(view -> {
                 int position = getAdapterPosition();
                 if (position != RecyclerView.NO_POSITION) {
@@ -77,14 +69,10 @@ public class SpecialistAdapter extends RecyclerView.Adapter<SpecialistAdapter.Vi
                     mListener.onListItemClick(home);
                 }
             });
-
-
         }
 
         public void bind(Specialist home) {
             binding.title.setText(home.getTitle());
-
-
         }
     }
 
@@ -92,8 +80,5 @@ public class SpecialistAdapter extends RecyclerView.Adapter<SpecialistAdapter.Vi
         specialistArrayList = new ArrayList<>();
         specialistArrayList.addAll(list);
         notifyDataSetChanged();
-
     }
-
-
 }

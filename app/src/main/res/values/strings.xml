@@ -61,10 +61,24 @@
 
 
     <array name="specialization_array">
+        <item>Anaesthesiology</item>
         <item>Cardiology</item>
+        <item>Cardiovascular/Thoracic Surgery</item>
+        <item>Clinical Immunology/Allergy</item>
         <item>Dentistry</item>
         <item>Dermatology</item>
+        <item>Diagnostic Radiology</item>
+        <item>Gastroenterology</item>
+        <item>General Surgery</item>
+        <item>General/Clinical Pathology</item>
         <item>Gynecology</item>
+        <item>Otolaryngology</item>
         <item>Physician</item>
+        <item>Plastic Surgery</item>
+        <item>Psychiatry</item>
+        <item>Neurology</item>
+        <item>Urology</item>
+
+
     </array>
 </resources>
